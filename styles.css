@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #001f3f; /* رنگ شب */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+.vpn-container {
+    background-color: rgba(255, 255, 255, 0.1); /* پس‌زمینه نیمه شفاف */
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    text-align: center;
+    width: 350px;
+    backdrop-filter: blur(10px); /* افکت بلور */
+}
+.vpn-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.vpn-button {
+    background-color: #ffcc00; /* رنگ دکمه شبیه به نور ماه */
+    color: black;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+.vpn-button:hover {
+    background-color: #e6b800; /* رنگ دکمه در حالت هاور */
+}
+.status {
+    margin-top: 20px;
+    font-size: 20px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+.moon {
+    width: 100px;
+    height: 100px;
+    background-color: #ffcc00; /* رنگ ماه */
+    border-radius: 50%;
+    position: relative;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    animation: moonAnimation 2s infinite alternate; /* انیمیشن */
+}
+.moon::before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: #001f3f; /* رنگ پس‌زمینه */
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 20px; /* موقعیت هلال */
+}
+@keyframes moonAnimation {
+    0% {
+        transform: translateY(0); /* موقعیت اولیه */
+    }
+    100% {
+        transform: translateY(-10px); /* حرکت به سمت بالا */
+    }
+}

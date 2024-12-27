@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه وی‌پی‌ان - شبیه ماه</title>
+    <link rel="stylesheet" href="styles.css"> <!-- لینک به فایل CSS -->
+</head>
+<body>
+    <div class="vpn-container">
+        <div class="moon"></div>
+        <div class="vpn-title">اتصال به وی‌پی‌ان</div>
+        <button class="vpn-button" onclick="connectVPN()">اتصال</button>
+        <div class="status" id="status">وضعیت: قطع</div>
+    </div>
+
+    <script>
+        function connectVPN() {
+            const status = document.getElementById('status');
+            status.innerText = 'وضعیت: در حال اتصال...';
+            setTimeout(() => {
+                status.innerText = 'وضعیت: متصل';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
